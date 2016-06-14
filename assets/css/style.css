@@ -1,0 +1,45 @@
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+body{
+	font-family: roboto;
+}
+
+#text-container{
+	position: absolute;
+	width: 50%;
+	height: 75%;
+	margin:0 auto;
+	left:0;right:0;top:0;bottom:0;
+	overflow-y: scroll;
+	background-color: #3F51B5;
+	padding: 30px;
+	color: white;
+}
+
+.time{
+	position: relative; 
+	float: right;
+	font-size: 10px;
+	transform: translateY(0);
+}
+
+.chat-container{
+	position: relative;
+	background: #1A237E;
+	padding: 10px;
+	margin-top:20px;
+	border-radius: 5px;
+}
+
+.author{
+	position: relative;
+	width: 20%;
+	background-color:#303F9F;
+	color:#90A4AE;
+	padding: 5px;
+	left:-10px;
+	top:-10px;
+}
