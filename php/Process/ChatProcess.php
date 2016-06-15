@@ -2,9 +2,10 @@
 
 require_once '../Classes/Chat.class.php';
 
-/*$id_user = $_SESSION['id_user'];*/
+session_start();
+
+$id_user = $_SESSION['id_user'];
 $cmd = $_GET['do'];
-$id_user = 2;
 $chat = new Chat();
 
 switch ($cmd) {

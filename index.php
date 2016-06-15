@@ -3,7 +3,6 @@
 <head>
 	<title>Chat Box</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
@@ -20,8 +19,12 @@
 				require_once 'view/chat.php';
 				break;
 
-			default:
+			case 'user':
+				require_once 'php/Process/UserProcess.php';
+				break;
 
+			default:
+				header("location:handler.php");
 				break;
 		}
 	}else{

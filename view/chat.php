@@ -1,11 +1,9 @@
 <?php 
-
 	session_start();
-	if (!isset($_SESSION['id_logchat'])) {
+	if (!isset($_SESSION['id_user'])) {
 		header("location:./?p=login");
 	}
 ?>
-
 	<div id="ChatBox-Container">
 		<div id="text-container">
 			<div class="text"></div>
