@@ -7,8 +7,8 @@ $(function(){
 
 	function checkChat(){
 		$.getJSON('php/Process/ChatProcess.php?do=countChat',function(result){
-			if (result['response']==200) {
-				check = result['data']['id_logchat'];
+			if (result) {
+				check = result;
 			}else{
 				check = false;
 			}

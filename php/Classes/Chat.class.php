@@ -17,7 +17,7 @@ class Chat extends Api
 	public function count(){
 		$stmt = $this->select('all','id_logchat','logchat ORDER BY id_logchat DESC LIMIT 1');
 		$data = $this->fetch($stmt);
-		return $this->response(200,$data);
+		echo $data['id_logchat'];
 	}
 
 	public function send($id_user,$text){
@@ -32,12 +32,15 @@ class Chat extends Api
 	}
 
 	public function setOn($id_user){
-		$stmt = $this->update('where','userdata',array('status'),array(1,$id_user),"id_user = ?");
-		$data = $this->fetchAll($stmt);
-		if (isset($data)) return $this->response(200,$data);
+		$stmt = $this->update('where','userdata',array('status'),array(1),"id_user = $id_user");
+		if (isset($stmt)) return true;
 	}
 
-
+	public function setoff(){
+		$stmt = $this->update('all','userdata',array('status'),array(0));
+	}
 }
+
+
 
 ?>

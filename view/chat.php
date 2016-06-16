@@ -9,7 +9,7 @@
 			<div class="text"></div>
 		</div>
 		<div id="input-container">
-			<input type="text" id="Chatext">
+			<textarea id="Chatext"></textarea>
 			<input type="button" id="Chatbtn">
 		</div>
 	</div>

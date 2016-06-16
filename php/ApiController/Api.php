@@ -83,7 +83,7 @@ class Api extends ConnectDB
 	protected function update($command,$table,$row=[],$val=[],$req=""){
 		switch ($command) {
 			case 'all':
-				if (sizeof($row,$val)==sizeof($val)) {
+				if (sizeof($row)==sizeof($val)) {
 					$stmt = "UPDATE $table SET ";
 					for ($i=0; $i < sizeof($row) ; $i++) { 
 						if ($i != 0) {
@@ -99,7 +99,7 @@ class Api extends ConnectDB
 				}
 				break;
 			case 'where':
-				if (sizeof($row,$val)==sizeof($val)) {
+				if (sizeof($row)==sizeof($val)) {
 					$stmt = "UPDATE $table SET ";
 					for ($i=0; $i < sizeof($row) ; $i++) { 
 						if ($i != 0) {
@@ -111,7 +111,7 @@ class Api extends ConnectDB
 					$stmt .= " WHERE $req ;";
 					return $this->runQuery($stmt,$val);
 				}else{
-					echo $this->errText;
+					echo $stmt;
 				}
 				break;
 			
