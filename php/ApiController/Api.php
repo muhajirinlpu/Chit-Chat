@@ -111,7 +111,7 @@ class Api extends ConnectDB
 					$stmt .= " WHERE $req ;";
 					return $this->runQuery($stmt,$val);
 				}else{
-					echo $stmt;
+					echo $this->errText;
 				}
 				break;
 			

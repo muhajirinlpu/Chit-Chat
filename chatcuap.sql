@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 15, 2016 at 05:40 
+-- Generation Time: Jun 16, 2016 at 01:39 
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -38,11 +38,8 @@ CREATE TABLE `logchat` (
 --
 
 INSERT INTO `logchat` (`id_logchat`, `author`, `text`, `waktu`) VALUES
-(1, '1', 'Hallooo', '2016-06-15 03:35:39'),
-(2, '2', 'Apa', '2016-06-15 03:37:54'),
-(3, '1', 'ga apa', '2016-06-15 03:38:08'),
-(4, '2', 'Hemmm', '2016-06-15 03:38:22'),
-(5, '1', 'Asemmmm', '2016-06-15 03:38:56');
+(33, '1', 'Hello :D', '2016-06-16 11:36:24'),
+(34, '4', 'Hai ... ', '2016-06-16 11:37:41');
 
 -- --------------------------------------------------------
 
@@ -54,8 +51,8 @@ CREATE TABLE `userdata` (
   `id_user` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `status` tinyint(1) NOT NULL,
-  `picture` text NOT NULL
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `picture` varchar(255) NOT NULL DEFAULT 'default.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -64,7 +61,8 @@ CREATE TABLE `userdata` (
 
 INSERT INTO `userdata` (`id_user`, `username`, `password`, `status`, `picture`) VALUES
 (1, 'muhajirinlpu', 'lalala', 1, 'mhjr.png'),
-(2, 'anonymous', '010101', 0, 'anom.png');
+(2, 'anonymous', '010101', 1, 'anom.png'),
+(4, 'root', '9514', 0, 'default.png');
 
 --
 -- Indexes for dumped tables
@@ -90,12 +88,12 @@ ALTER TABLE `userdata`
 -- AUTO_INCREMENT for table `logchat`
 --
 ALTER TABLE `logchat`
-  MODIFY `id_logchat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_logchat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `userdata`
 --
 ALTER TABLE `userdata`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
