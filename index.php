@@ -4,6 +4,7 @@
 	<title>Chat Box</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 
@@ -17,10 +18,15 @@
 			
 			case 'chat':
 				require_once 'view/chat.php';
+				echo '<script type="text/javascript" src="assets/js/script.js"></script>';
 				break;
 
 			case 'user':
 				require_once 'php/Process/UserProcess.php';
+				break;
+
+			case 'process':
+				require_once 'php/Process/ChatProcess.php';
 				break;
 
 			default:
@@ -33,7 +39,5 @@
 
 ?>
 	
-	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>

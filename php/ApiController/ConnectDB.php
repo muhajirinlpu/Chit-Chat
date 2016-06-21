@@ -17,11 +17,7 @@ class ConnectDB
 	
 	public function connectDB($data=array())
 	{
-		$server = $data['server'];
-		$dbname = $data['dbname'];
-		$user   = $data['user'];
-		$pass   = $data['pass'];
-		return $this->connection($server,$dbname,$user,$pass);
+		return $this->connection($data['server'],$data['dbname'],$data['user'],$data['pass']);
 	}
 
 

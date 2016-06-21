@@ -5,7 +5,56 @@
 
 body{
 	font-family: roboto;
+	margin: 0 ; 
+	padding: 0;
+	background:#bababa ;
 }
+
+
+.tengah{
+	position: relative;
+	top: 0;right: 0;left: 0;bottom: 0;
+	margin: 0 auto;
+}
+
+/* For page login */
+
+#Login-container{
+	width: 50%;
+	height: 100px ;
+	size: 100% 100%;
+	padding: 50px;
+	background: #6198ff;
+}
+
+form{
+	position: relative;
+	margin: 0 auto;
+	transform: translateX(20%);
+}
+
+form input{
+	border: none;
+	background: #e6e6e6;
+	width: 30%;
+	height: 30px;
+	border-radius: 5px;
+}
+
+[placeholder] {
+	text-align: center;
+	color: #6198ff;
+	font-weight: bold;
+}
+
+#login{
+	margin-top: 10px;
+	text-align: center;
+	color: #6198ff;
+	font-weight: bold;
+}
+
+/* For page chat */
 
 #text-container{
 	position: absolute;

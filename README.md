@@ -12,4 +12,7 @@ Note :
 
 Changelog : 
 	15 Juni 2016 
-		> Adding login for chat .
+		Adding login for chat .
+
+	16 juni 2016 
+		Fixing problem data check to large . Now just 394B/1,5s .

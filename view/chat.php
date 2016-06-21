@@ -14,6 +14,10 @@
 		</div>
 	</div>
 
+	<div id="Online-Container">
+		<ul id="onText"></ul>
+	</div>
+
 	<script type="text/javascript">
 		var user = <?php echo $_SESSION['id_user'] ?> ;
 	</script>

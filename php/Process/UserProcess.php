@@ -14,7 +14,7 @@ switch ($_GET['do']) {
 			if ($login) {
 				header("location:./?p=chat");
 			}else{
-				header("location:./?p=login?m=wrong");
+				header("location:./?p=login&m=wrong");
 			}
 		}
 		break;

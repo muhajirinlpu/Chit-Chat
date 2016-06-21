@@ -9,7 +9,7 @@ $chat = new Chat();
 
 switch ($cmd) {
 	case 'readMessage':
-		$chat->read($_SESSION['id_user'],$_POST['current']);
+		$chat->read($_POST['current']);
 		break;
 
 	case 'countChat':
@@ -18,6 +18,14 @@ switch ($cmd) {
 	
 	case 'sendMessage':
 		$chat->send($_SESSION['id_user'],$_POST['isi']);
+		break;
+
+	case 'countOnline':
+		$chat->countOn($_SESSION['id_user']);
+		break;
+
+	case 'showOn':
+		$chat->whoOn();
 		break;
 
 	default:
